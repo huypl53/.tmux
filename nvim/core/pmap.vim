@@ -1,3 +1,8 @@
+" File              : pmap.vim
+" Author            : phamlehuy53 <unknownsol98@gmail>
+" Date              : 22.01.2021
+" Last Modified Date: 22.01.2021
+" Last Modified By  : phamlehuy53 <unknownsol98@gmail>
 
 "--------------------------"
 "     vim-buffet Keymap    "
@@ -244,6 +249,7 @@ nnoremap <silent> <C-i> <C-i>
 "     Ipython-cell Keymap  "
 "--------------------------"
 "
+" autocmd FileType python inoremap <leader>a/ : 
 autocmd FileType python nnoremap <leader>as :SlimeSend1 ipython --matplotlib<CR>
 autocmd FileType python nnoremap <leader>ar :IPythonCellRun<CR>
 autocmd FileType python nnoremap <leader>aR :IPythonCellRunTime<CR>
@@ -267,7 +273,9 @@ autocmd FileType python autocmd filetype python nnoremap <F2> :SlimeSend1 python
 "----------------------"
 "wmvanvliet/jupyter-vim"
 "----------------------"
+
 " Run current file
+let g:python3_host_prog = '/home/huy/anaconda3/envs/d2l/bin/python'
 autocmd FileType python nnoremap <buffer> <silent> <localleader>R :JupyterRunFile<CR>
 autocmd FileType python nnoremap <buffer> <silent> <localleader>I :PythonImportThisFile<CR>
 

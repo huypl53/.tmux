@@ -88,8 +88,11 @@ hook_add = '''
 '''
 
 # Insert or delete brackets, parens, quotes in pair.
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
+
 [[plugins]]
-repo = 'jiangmiao/auto-pairs'
+repo = 'cohama/lexima.vim'
 
 # Resize windows
 [[plugins]]

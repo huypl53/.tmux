@@ -18,6 +18,7 @@ nnoremap <silent> <Space>cw :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
 
 " insert keymap like emacs
 inoremap <C-w> <C-[>diwa
+" inoremap <C-BS> <C-[>diwa
 inoremap <C-h> <BS>
 inoremap <C-d> <Del>
 inoremap <C-k>  <ESC>d$a

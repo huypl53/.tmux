@@ -152,5 +152,6 @@
     "yml",
     "vim"
   ],
-	"python.jediEnabled": true
+	"python.jediEnabled": true,
+	"python.linting.pylintEnabled": false
 }

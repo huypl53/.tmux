@@ -1,3 +1,8 @@
+" File              : general.vim
+" Author            : phamlehuy53 <unknownsol98@gmail>
+" Date              : 24.01.2021
+" Last Modified Date: 24.01.2021
+" Last Modified By  : phamlehuy53 <unknownsol98@gmail>
 
 "General settins{{{
 set mouse=nv                 " Disable mouse in command-line mode
@@ -42,9 +47,9 @@ if has('mac')
 		\ }
 endif
 
-if has('clipboard')
-	set clipboard& clipboard+=unnamedplus
-endif
+" if has('clipboard')
+" 	set clipboard& clipboard+=unnamedplus
+" endif
 
 " Wildmenu {{{
 " --------

@@ -48,6 +48,11 @@ hook_source = '''
 	let g:rainbow_active = 1
 '''
 
+
+[[plugins]]
+repo = 'Yggdroot/hiPairs'
+
+[[plugins]]
 repo = 'voldikss/vim-floaterm'
 on_cmd = ['FloatermNew', 'FloatermToggle', 'FloatermPrev', 'FloatermNext', 'FloatermSend']
 hook_source= '''
@@ -88,11 +93,11 @@ hook_add = '''
 '''
 
 # Insert or delete brackets, parens, quotes in pair.
-# [[plugins]]
-# repo = 'jiangmiao/auto-pairs'
-
 [[plugins]]
-repo = 'cohama/lexima.vim'
+repo = 'jiangmiao/auto-pairs'
+
+# [[plugins]]
+# repo = 'cohama/lexima.vim'
 
 # Resize windows
 [[plugins]]

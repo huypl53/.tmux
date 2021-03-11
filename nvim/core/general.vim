@@ -1,7 +1,7 @@
 " File              : general.vim
 " Author            : phamlehuy53 <unknownsol98@gmail>
 " Date              : 24.01.2021
-" Last Modified Date: 24.01.2021
+" Last Modified Date: 25.01.2021
 " Last Modified By  : phamlehuy53 <unknownsol98@gmail>
 
 "General settins{{{

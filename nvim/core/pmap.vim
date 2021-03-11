@@ -1,7 +1,7 @@
 " File              : pmap.vim
 " Author            : phamlehuy53 <unknownsol98@gmail>
 " Date              : 22.01.2021
-" Last Modified Date: 22.01.2021
+" Last Modified Date: 15.02.2021
 " Last Modified By  : phamlehuy53 <unknownsol98@gmail>
 
 "--------------------------"
@@ -248,13 +248,14 @@ nnoremap <silent> <C-i> <C-i>
 "--------------------------"
 "     Ipython-cell Keymap  "
 "--------------------------"
-"
-" autocmd FileType python inoremap <leader>a/ : 
+" [hanschen/vim-ipython-cell]
 autocmd FileType python nnoremap <leader>as :SlimeSend1 ipython --matplotlib<CR>
 autocmd FileType python nnoremap <leader>ar :IPythonCellRun<CR>
 autocmd FileType python nnoremap <leader>aR :IPythonCellRunTime<CR>
 autocmd FileType python nnoremap <leader>ac :IPythonCellExecuteCell<CR>
 autocmd FileType python nnoremap <leader>aC :IPythonCellExecuteCellJump<CR>
+autocmd FileType python nnoremap <leader>ae :IPythonCellExecuteCellVerbose<CR>
+autocmd FileType python nnoremap <leader>aE :IPythonCellExecuteCellVerboseJump<CR>
 autocmd FileType python nnoremap <leader>al :IPythonCellClear<CR>
 autocmd FileType python nnoremap <leader>ax :IPythonCellClose<CR>
 autocmd FileType python nnoremap [c :IPythonCellPrevCell<CR>
@@ -266,34 +267,32 @@ autocmd FileType python nnoremap <leader>aQ :IPythonCellRestart<CR>
 autocmd FileType python nnoremap <leader>ad :SlimeSend1 %debug<CR>
 autocmd FileType python nnoremap <leader>aq :SlimeSend1 exit<CR>
 autocmd FileType python autocmd filetype python nnoremap <F2> :SlimeSend1 python % <CR>
-"let g:ipython_cell_tag = ['# %%', '#%%', '# <codecell>', '##']
+" let g:ipython_cell_tag = ['# %%', '#%%', '# <codecell>', '##']
 
 
-
-"----------------------"
-"wmvanvliet/jupyter-vim"
-"----------------------"
-
+"---------------------"
+" jupyter-vim/jupyter-vim "
+"-------------------------"
 " Run current file
-let g:python3_host_prog = '/home/huy/anaconda3/envs/d2l/bin/python'
-autocmd FileType python nnoremap <buffer> <silent> <localleader>R :JupyterRunFile<CR>
-autocmd FileType python nnoremap <buffer> <silent> <localleader>I :PythonImportThisFile<CR>
+" autocmd FileType python nnoremap <leader>as :SlimeSend1 ipython --matplotlib<CR>
+" nnoremap <buffer> <silent> <leader>aR :JupyterRunFile<CR>
+" nnoremap <buffer> <silent> <leader>aI :PythonImportThisFile<CR>
+" 
+" " Change to directory of current file
+" nnoremap <buffer> <silent> <leader>ad :JupyterCd %:p:h<CR>
+" 
+" " Send a selection of lines
+" " nnoremap <buffer> <silent> <leader>aX :JupyterSendCell<CR>
+" nnoremap <leader>ar :JupyterSendCell<CR>
+" nnoremap <leader>aR :JupyterSendRange<CR>
+" nmap     <leader>ae <Plug>JupyterRunTextObj
+" vmap     <leader>ae <Plug>JupyterRunVisual
+" 
+" nnoremap <leader>au :JupyterUpdateShell<CR>
+" 
+" " Debugging maps
+" nnoremap <leader>ab :PythonSetBreak<CR>
 
-" Change to directory of current file
-autocmd FileType python nnoremap <buffer> <silent> <localleader>d :JupyterCd %:p:h<CR>
-
-" Send a selection of lines
-autocmd FileType python nnoremap <buffer> <silent> <localleader>X :JupyterSendCell<CR>
-autocmd FileType python nnoremap <buffer> <silent> <localleader>E :JupyterSendRange<CR>
-autocmd FileType python nmap     <buffer> <silent> <localleader>e <Plug>JupyterRunTextObj
-autocmd FileType python vmap     <buffer> <silent> <localleader>e <Plug>JupyterRunVisual
-
-autocmd FileType python nnoremap <buffer> <silent> <localleader>U :JupyterUpdateShell<CR>
-
-" Debugging maps
-autocmd FileType python nnoremap <buffer> <silent> <localleader>b :PythonSetBreak<CR>
-
-" -----------------------------------------------------------
 
 " Goyo
 nnoremap <Leader>G :Goyo<CR>

@@ -332,6 +332,9 @@ set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
 set -g @plugin 'tmux-plugins/tmux-net-speed'
 set -g @plugin 'samoshkin/tmux-plugin-sysstat'
 
+
+set -g @plugin 'tmux-plugins/tmux-copycat'
+set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @continuum-restore 'on'
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings

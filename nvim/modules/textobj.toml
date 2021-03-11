@@ -74,3 +74,16 @@ hook_add = '''
 # windows, it will flash so you can see where it is.
 [[plugins]]
 repo = 'DanilaMihailov/beacon.nvim'
+
+# Fold code
+# [[plugins]]
+# repo = 'pseewald/vim-anyfold'
+# hook_add = '''
+# autocmd Filetype * AnyFoldActivate
+# let g:anyfold_fold_comments=1
+# set foldlevel=0
+# hi Folded term=NONE cterm=NONE
+# '''
+
+[[plugins]]
+repo = 'tmhedberg/SimpylFold'

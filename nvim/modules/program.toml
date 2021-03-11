@@ -81,18 +81,31 @@ hook_source = '''
 
 '''
 
+# [[plugins]]
+# repo = 'jupyter-vim/jupyter-vim'
+# on_ft = 'python'
+# hook_source = '''
+# 	let g:jupyter_mapkeys = 0
+# '''
+
+# Current use
 [[plugins]]
 repo = 'hanschen/vim-ipython-cell'
 on_ft = 'python'
 
-[[plugins]]
-repo = 'wmvanvliet/jupyter-vim'
-on_ft = 'python'
-# This plugin conflict coc color
 # [[plugins]]
 # repo = 'wmvanvliet/jupyter-vim'
 # on_ft = 'python'
 
+
 # [[plugins]]
 # repo = 'goerz/jupytext.vim'
 # on_ft = 'python'
+
+# [[plugins]]
+# repo = 'puremourning/vimspector'
+# on_ft = 'python'
+
+[[plugins]]
+repo = 'sakhnik/nvim-gdb'
+on_ft = 'python'

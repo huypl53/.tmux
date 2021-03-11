@@ -19,7 +19,7 @@ hook_source = '''
 [[plugins]]
 repo= 'alpertuna/vim-header'
 hook_source = '''
-	let g:header_auto_add_header = 1
+	let g:header_auto_add_header = 0
 	let g:header_field_author = 'phamlehuy53'
 	let g:header_field_author_email = 'unknownsol98@gmail'
 '''

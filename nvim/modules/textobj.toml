@@ -85,5 +85,8 @@ repo = 'DanilaMihailov/beacon.nvim'
 # hi Folded term=NONE cterm=NONE
 # '''
 
+# [[plugins]]
+# repo = 'tmhedberg/SimpylFold'
+
 [[plugins]]
-repo = 'tmhedberg/SimpylFold'
+repo = 'kalekundert/vim-coiled-snake'

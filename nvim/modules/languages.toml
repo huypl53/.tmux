@@ -79,7 +79,7 @@ hook_source = '''
     let g:html5_aria_attributes_complete = 0
 '''
 
-[[pluings]]
+[[plugins]]
 repo = 'jackguo380/vim-lsp-cxx-highlight'
 on_ft = [ 'c','cpp' ]
 hook_source = '''
@@ -97,7 +97,7 @@ hook_source = '''
 		\})
 '''
 
-[[plugin]]
+[[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
 on_ft = [ 'typescript', 'typescriptreact' ]
 
@@ -108,3 +108,12 @@ depends = 'vim-javascript'
 hook_add = '''
 	let g:vim_jsx_pretty_colorful_config = 1
 '''
+
+[[plugins]]
+repo = 'dpelle/vim-LanguageTool'
+hook_add = '''
+	let g:languagetool_jar="$HOME/.bin/LanguageTool-5.2/languagetool-commandline.jar"
+'''
+
+[[plugins]]
+repo = 'kamykn/spelunker.vim'

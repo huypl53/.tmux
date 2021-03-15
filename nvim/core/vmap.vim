@@ -17,7 +17,7 @@ nnoremap [w :<C-u>WhitespacePrev<CR>
 nnoremap <silent> <Space>cw :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
 
 " insert keymap like emacs
-inoremap <C-w> <C-[>diwa
+inoremap <C-w> <C-[>diwi
 " inoremap <C-BS> <C-[>diwa
 inoremap <C-h> <BS>
 inoremap <C-d> <Del>
@@ -46,9 +46,9 @@ tnoremap <A-[> <C-\><C-n>
 
 function! s:QuiteVim() abort
   if empty(expand('%:t'))
-    execute ":q"
+    execute ":wqa"
   else
-    execute ":wq!"
+    execute ":wqa!"
   endif
 endfunction
 " Quiet
@@ -60,7 +60,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-
 
 " window
 nnoremap <leader>ws :<C-u>sp<CR>

@@ -117,3 +117,8 @@ hook_add = '''
 
 [[plugins]]
 repo = 'kamykn/spelunker.vim'
+hook_source = '''
+	let g:spelunker_spell_bad_group = 'SpelunkerSpellBad'
+	highlight SpelunkerSpellBad cterm=underline gui=underline guifg=NONE
+	highlight SpelunkerComplexOrCompoundWord cterm=underline ctermfg=NONE gui=underline guifg=NONE
+'''

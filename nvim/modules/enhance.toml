@@ -106,8 +106,8 @@ hook_add = '''
 '''
 
 # Depended line-number mode
-[[plugins]]
-repo = 'ericbn/vim-relativize'
+# [[plugins]]
+# repo = 'ericbn/vim-relativize'
 
 # Session auto saving
 [[plugins]]

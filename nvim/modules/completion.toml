@@ -30,7 +30,7 @@ hook_add = '''
 		\ 'coc-prettier',
 		\ 'coc-tslint-plugin',
 		\ 'coc-docthis',
-		\ 'coc-python',
+		\ 'coc-pyright',
 		\ 'coc-html',
 		\ 'coc-emmet',
 		\ 'coc-style-helper',

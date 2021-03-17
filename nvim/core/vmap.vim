@@ -29,6 +29,8 @@ inoremap <C-a> <ESC>^i
 inoremap <expr><C-e> pumvisible() ? "\<C-e>" : "\<End>"
 "insert a newline
 inoremap <C-O> <Esc>o
+inoremap <C-L> <Esc>O
+
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
 

@@ -109,3 +109,21 @@ on_ft = 'python'
 [[plugins]]
 repo = 'sakhnik/nvim-gdb'
 on_ft = 'python'
+
+
+[[plugins]]
+repo = 'pechorin/any-jump.vim'
+hook_source = '''
+	let g:any_jump_disable_default_keybindings = 1
+
+	" Custom ignore files
+	" default is: ['*.tmp', '*.temp']
+	let g:any_jump_ignored_files = ['*.tmp', '*.temp', '*.toml', '*.lua', '*.txt', '*.json']
+	
+	" Prefered search engine: rg or ag
+	let g:any_jump_search_prefered_engine = 'rg'
+'''
+
+
+[[plugins]]
+repo = 'jeetsukumaran/vim-indentwise'

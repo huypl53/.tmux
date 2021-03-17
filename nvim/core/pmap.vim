@@ -83,7 +83,7 @@ nnoremap <silent> <Leader>i :<C-u>Vista!!<CR>
 
 nnoremap <silent> <Leader>cr :QuickRun<CR>
 
-nnoremap <silent> <Leader>m :MundoToggle<CR>
+nnoremap <silent> <Leader>M :MundoToggle<CR>
 
 nmap gsj <Plug>(easymotion-w)
 nmap gsk <Plug>(easymotion-b)
@@ -270,29 +270,6 @@ autocmd FileType python autocmd filetype python nnoremap <F2> :SlimeSend1 python
 " let g:ipython_cell_tag = ['# %%', '#%%', '# <codecell>', '##']
 
 
-"---------------------"
-" jupyter-vim/jupyter-vim "
-"-------------------------"
-" Run current file
-" autocmd FileType python nnoremap <leader>as :SlimeSend1 ipython --matplotlib<CR>
-" nnoremap <buffer> <silent> <leader>aR :JupyterRunFile<CR>
-" nnoremap <buffer> <silent> <leader>aI :PythonImportThisFile<CR>
-" 
-" " Change to directory of current file
-" nnoremap <buffer> <silent> <leader>ad :JupyterCd %:p:h<CR>
-" 
-" " Send a selection of lines
-" " nnoremap <buffer> <silent> <leader>aX :JupyterSendCell<CR>
-" nnoremap <leader>ar :JupyterSendCell<CR>
-" nnoremap <leader>aR :JupyterSendRange<CR>
-" nmap     <leader>ae <Plug>JupyterRunTextObj
-" vmap     <leader>ae <Plug>JupyterRunVisual
-" 
-" nnoremap <leader>au :JupyterUpdateShell<CR>
-" 
-" " Debugging maps
-" nnoremap <leader>ab :PythonSetBreak<CR>
-
 
 " Goyo
 nnoremap <Leader>G :Goyo<CR>
@@ -313,3 +290,37 @@ vnoremap <silent> <localleader>f  :Farf<cr>
 " shortcut for far.vim replace
 nnoremap <silent> <localleader>r  :Farr<cr>
 vnoremap <silent> <localleader>r  :Farr<cr>
+
+
+"---------------------"
+"pechorin/any-jump.vim"
+"---------------------"
+" Normal mode: Jump to definition under cursore
+nnoremap <leader>mj :AnyJump<CR>
+
+" Visual mode: jump to selected text in visual mode
+xnoremap <leader>mj :AnyJumpVisual<CR>
+
+" Normal mode: open previous opened file (after jump)
+nnoremap <leader>mb :AnyJumpBack<CR>
+
+" Normal mode: open last closed search window again
+nnoremap <leader>ml :AnyJumpLastResults<CR>
+
+
+"----------------------------"
+"jeetsukumaran/vim-indentwise"
+"----------------------------"
+" [- : Move to previous line of lesser indent than the current line.
+" [+ : Move to previous line of greater indent than the current line.
+" [= : Move to previous line of same indent as the current line that is separated from the current line by lines of different indents.
+" ]- : Move to next line of lesser indent than the current line.
+" ]+ : Move to next line of greater indent than the current line.
+" ]= : Move to next line of same indent as the current line that is separated from the current line by lines of different indents.
+
+" {count}[_ : Move to previous line with indent-level of {count}.
+" {count}]_ : Move to next line with indent-level of {count}.
+
+" [% : Move to beginning of indent-block scope (i.e., move to the line just after the previous line of lesser indent); repeat for {count} outer scopes.
+" ]% : Move to end of indent-block scope (i.e., move to the line just before the next line of lesser indent); repeat for {count} outer scopes.
+

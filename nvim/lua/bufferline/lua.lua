@@ -56,7 +56,7 @@ require "bufferline".setup {
 local opt = {silent = true}
 
 vim.g.mapleader = " "
-
+vim.g.maplocalleader = ";"
 -- tabnew and tabprev
 vim.api.nvim_set_keymap("n", "<Leader>tn", [[<Cmd>BufferLineCycleNext<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>tp", [[<Cmd>BufferLineCyclePrev<CR>]], opt)

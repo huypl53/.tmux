@@ -62,7 +62,7 @@ nnoremap <silent> <Leader>,   :Clap coc_commands<CR>
 nnoremap <silent> <Leader>cs  :Clap coc_symbols<CR>
 nnoremap <silent> <Leader>cS  :Clap coc_services<CR>
 nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
-
+" TODO
 function! InitCaw() abort
 	if ! (&l:modifiable && &buftype ==# '')
 		silent! nunmap <buffer> gc

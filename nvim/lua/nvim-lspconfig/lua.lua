@@ -32,4 +32,3 @@ buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>",
 require "lspconfig".tsserver.setup {}
 require "lspconfig".cssls.setup {}
 require "lspconfig".html.setup {}
-require "lspconfig".pyright.setup{}

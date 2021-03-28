@@ -130,7 +130,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias waterfox="~/waterfox/waterfox"
-alias labelimg="python /mnt/01D322563C532490/dev_project/Python/labelImg-master/labelImg.py"
+alias labelimg="python /mnt/01D322563C532490/dev_project/Python/Labeling/labelimg/labelImg.py"
 alias labeleva="cd /mnt/01D322563C532490/dev_project/Python/Labeling/eva/ && ./start.sh"
 alias labelvott="/snap/vott/current/vott"
 alias model_vis_netron="/media/huy/Data/dev_project/Python/Visualization/Netron-4.0.9.AppImage"
@@ -147,7 +147,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export GTK_IM_MODULE="ibus"
 export QT_IM_MODULE="ibus"
 export XMODIFIERS="@im=ibus"
-
+export PATH="/home/huy/lua-5.4.2/src:$PATH"
 
 
 

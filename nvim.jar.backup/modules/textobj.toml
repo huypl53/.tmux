@@ -1,3 +1,4 @@
+# Done
 # sandwich.vim is a set of operator and textobject plugins to add/delete/replace 
 # surroundings of a sandwiched textobject, like (foo), "bar".
 [[plugins]]
@@ -23,6 +24,7 @@ repo = 'kana/vim-textobj-user'
 repo = 'terryma/vim-expand-region'
 on_map = { x = '<Plug>' }
 
+# Done
 [[plugins]]
 repo = 'AndrewRadev/splitjoin.vim'
 # on_map = { n = '<Plug>Splitjoin' }

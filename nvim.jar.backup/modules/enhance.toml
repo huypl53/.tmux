@@ -52,6 +52,7 @@ hook_source = '''
 [[plugins]]
 repo = 'Yggdroot/hiPairs'
 
+# TODO
 [[plugins]]
 repo = 'voldikss/vim-floaterm'
 on_cmd = ['FloatermNew', 'FloatermToggle', 'FloatermPrev', 'FloatermNext', 'FloatermSend']
@@ -82,6 +83,7 @@ hook_source = '''
 		source  $VIM_PATH/vim-modules/module-goyo.vim
 '''
 
+# TODO
 [[plugins]]
 repo = 'junegunn/Limelight.vim'
 on_cmd = 'Limelight'
@@ -99,6 +101,7 @@ repo = 'jiangmiao/auto-pairs'
 # [[plugins]]
 # repo = 'cohama/lexima.vim'
 
+# Done
 # Resize windows
 [[plugins]]
 repo = 'simeji/winresizer'

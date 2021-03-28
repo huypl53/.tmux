@@ -62,6 +62,7 @@ on_ft = [ 'Dockerfile', 'docker-compose' ]
 # repo = 'heavenshell/vim-pydocstring'
 # on_ft = 'python'
 
+# Done
 [[plugins]]
 repo = 'kkoomen/vim-doge'
 on_ft = 'python'

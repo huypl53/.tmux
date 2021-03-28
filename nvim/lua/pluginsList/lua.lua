@@ -20,7 +20,7 @@ return require("packer").startup(
         use {"nvim-treesitter/nvim-treesitter"}
         use {"chriskempson/base16-vim"}
         use {"norcalli/nvim-colorizer.lua"}
-        use {'Yggdroot/indentLine'}
+        -- use {'Yggdroot/indentLine'}
         use {"ryanoasis/vim-devicons"}
 
 
@@ -76,7 +76,8 @@ return require("packer").startup(
         
         -- Resize windos by Ctrl-e
         use {'simeji/winresizer'}
-        -- use {'rmagatti/auto-session'}
+        use {'rmagatti/auto-session'}
+        -- vim.g.auto_session_root_dir = os.getenv("HOME") .. "./vim-session/"
 
 -- clever-f.vim extends f, F, t and T mappings for more convenience. 
 -- Instead of ;, f is available to repeat after you type f{char} or F{char}. 

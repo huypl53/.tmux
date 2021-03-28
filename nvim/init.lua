@@ -15,17 +15,14 @@ require "colorizer".setup()
 require("nvim-lspconfig.lua")
 require("nvim-compe.lua")
 
+require("hlslen.lua")
+
 local cmd = vim.cmd
 local g = vim.g
 
 g.mapleader = " "
 g.auto_save = 1
 
--- colorscheme
-
-cmd "colorscheme base16-onedark"
-cmd "syntax enable"
-cmd "syntax on"
 
 -- blankline
 
@@ -41,7 +38,6 @@ g.indent_blankline_show_trailing_blankline_indent = false
 g.indent_blankline_show_first_indent_level = false
 
 require("treesitter.lua")
-require("mappings.lua")
 
 -- highlights
 cmd("hi LineNr guibg=NONE")
@@ -64,6 +60,14 @@ cmd("hi NvimTreeFolderName guifg = #61afef")
 cmd("hi NvimTreeIndentMarker guifg=#545862")
 
 cmd("hi Normal guibg=NONE ctermbg=NONE")
+
+-- colorscheme
+
+cmd "colorscheme base16-monokai"
+cmd "syntax enable"
+cmd "syntax on"
+
+require("mappings.lua")
 
 require("nvim-autopairs").setup()
 require("lspkind").init(

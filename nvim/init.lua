@@ -3,8 +3,9 @@ require("pluginsList.lua")
 require("web-devicons.lua")
 
 require("utils.lua")
-require("nvimTree.lua")
-require("bufferline.lua")
+require("nerdTree.lua")
+-- require("nvimTree.lua")
+-- require("bufferline.lua")
 require("statusline.lua")
 require("telescope-nvim.lua")
 
@@ -39,6 +40,13 @@ g.indent_blankline_show_first_indent_level = false
 
 require("treesitter.lua")
 
+cmd("set relativenumber")
+-- colorscheme
+
+cmd "colorscheme base16-monokai"
+cmd "syntax enable"
+cmd "syntax on"
+
 -- highlights
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
@@ -58,14 +66,7 @@ cmd("hi PmenuSel  guibg=#98c379")
 cmd("hi NvimTreeFolderIcon guifg = #61afef")
 cmd("hi NvimTreeFolderName guifg = #61afef")
 cmd("hi NvimTreeIndentMarker guifg=#545862")
-
 cmd("hi Normal guibg=NONE ctermbg=NONE")
-
--- colorscheme
-
-cmd "colorscheme base16-monokai"
-cmd "syntax enable"
-cmd "syntax on"
 
 require("mappings.lua")
 

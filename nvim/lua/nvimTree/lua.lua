@@ -45,7 +45,7 @@ end
 
 -- Mappings for nvimtree
 
-vim.api.nvim_set_keymap(
+--[[ vim.api.nvim_set_keymap(
     "n",
     "<C-n>",
     ":NvimTreeToggle<CR>",
@@ -53,7 +53,7 @@ vim.api.nvim_set_keymap(
         noremap = true,
         silent = true
     }
-)
+) ]]
 
 vim.g.nvim_tree_bindings = {
     ["<CR>"] = get_lua_cb("edit"),

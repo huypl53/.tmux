@@ -1,7 +1,6 @@
 -- check if packer is installed (~/local/share/nvim/site/pack)
 local packer_exists = pcall(vim.cmd, [[packadd packer.nvim]])
 
-
 return require("packer").startup(
     function()
         use {"wbthomason/packer.nvim", opt = true}
@@ -12,13 +11,20 @@ return require("packer").startup(
         -- A Lua module to interactive with system processes. 
         -- Pass in your command, the desired args, env and cwd. 
         -- Define optional callbacks for on_stdout, on_stderr and on_exit and start your Job.
+
+        -- nerdTree
+        use {"preservim/nerdtree"}
+
+        use {"romgrk/barbar.nvim", 
+            require = {"kyazdani42/nvim-web-devicons"}}
         use {"nvim-lua/plenary.nvim"}
         use {"lewis6991/gitsigns.nvim"}
         use {"glepnir/galaxyline.nvim"}
-        use {"akinsho/nvim-bufferline.lua"}
+        -- use {"akinsho/nvim-bufferline.lua"}
         use {"907th/vim-auto-save"}
         use {"nvim-treesitter/nvim-treesitter"}
         use {"chriskempson/base16-vim"}
+
         use {"norcalli/nvim-colorizer.lua"}
         -- use {'Yggdroot/indentLine'}
         use {"ryanoasis/vim-devicons"}
@@ -45,10 +51,20 @@ return require("packer").startup(
         use {"sainnhe/sonokai"}
     -- Highlight current line
         use {'DanilaMihailov/beacon.nvim'}
+        use {'Xuyuanp/scrollbar.nvim'}
+        use {'editorconfig/editorconfig-vim'}
+  --[[ vim.cmd("CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()")
+  vim.cmd("WinEnter,FocusGained           * silent! lua require('scrollbar').show()")
+  vim.cmd("WinLeave,FocusLost             * silent! lua require('scrollbar').clear()") ]]
 --        use {"tanvirtin/monokai.nvim"}
 -- Faster motion
         use { 'easymotion/vim-easymotion'}
         use {"rhysd/accelerated-jk"}
+
+        -- It's called vim-visual-multi in analogy with visual-block, but the plugin works mostly from normal mode.
+        -- use {"mg979/vim-visual-multi"}
+
+        -- use {"romainl/vim-qf"}
 
 
   -- Assign mark, rename
@@ -87,24 +103,7 @@ return require("packer").startup(
 
 -- help you read complex code by showing diff level of parentheses in diff color !!
         use {'luochen1990/rainbow',
-          ft = {      
-            'html',
-            'css',
-            'javascript',
-            'javascriptreact',
-            'go',
-            'python',
-            'lua',
-            'rust',
-            'vim',
-            'less',
-            'stylus',
-            'sass',
-            'scss',
-            'json',
-            'ruby',
-            'toml',
-          }
+        ft = { 'html', 'css', 'javascript', 'javascriptreact', 'go', 'python', 'lua', 'rust', 'vim', 'less', 'stylus', 'sass', 'scss', 'json', 'ruby', 'toml' }
         }
 
 -- Float terminal
@@ -169,6 +168,7 @@ return require("packer").startup(
       Press *, #, g* or g# to search word nearest to the cursor ]]
         use {'kevinhwang91/nvim-hlslens'}
         use {"lukas-reineke/indent-blankline.nvim", branch = 'lua'}
+
     end
 )
 

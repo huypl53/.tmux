@@ -265,3 +265,70 @@ L          toggle results lists ui style ]]
 --Yilin-Yang/vim-markbar--
 --------------------------
 vim.api.nvim_set_keymap('n', '<Leader>M', '<Plug>ToggleMarkbar', {})
+
+--------------------
+--vim-visual-multi--
+--[[ Basic usage:
+
+    select words with Ctrl-N (like Ctrl-d in Sublime Text/VS Code)
+    create cursors vertically with Ctrl-Down/Ctrl-Up
+    select one character at a time with Shift-Arrows
+    press n/N to get next/previous occurrence
+    press [/] to select next/previous cursor
+    press q to skip current and get next occurrence
+    press Q to remove current cursor/selection
+    start insert mode with i,a,I,A
+
+Two main modes:
+
+    in cursor mode commands work as they would in normal mode
+    in extend mode commands work as they would in visual mode
+    press Tab to switch between «cursor» and «extend» mode
+
+Most vim commands work as expected (motions, r to replace characters, ~ to change case, etc). Additionally you can:
+
+    run macros/ex/normal commands at cursors
+    align cursors
+    transpose selections
+    add patterns with regex, or from visual mode
+
+And more... of course, you can enter insert mode and autocomplete will work. ]]
+
+----------------------
+--romgrk/barbar.nvim--
+----------------------
+--Move to previous/next
+vim.api.nvim_set_keymap("n", "<A-,>", ":BufferPrevious<CR>", {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap("n", "<A-.>", ":BufferNext<CR>", {noremap = true, silent = true})
+--Re-order to previous/next
+vim.api.nvim_set_keymap("n", "<A-<>", ":BufferMovePrevious<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A->>", ":BufferMoveNext<CR>", {noremap = true, silent = true})
+--Goto buffer in position...
+vim.api.nvim_set_keymap("n", "<A-1>", ":BufferGoto 1<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-2>", ":BufferGoto 2<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-3>", ":BufferGoto 3<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-4>", ":BufferGoto 4<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-5>", ":BufferGoto 5<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-6>", ":BufferGoto 6<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-7>", ":BufferGoto 7<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-8>", ":BufferGoto 8<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-9>", ":BufferLast<CR>", {noremap = true, silent = true})
+
+--Close buffer
+vim.api.nvim_set_keymap("n", "<A-c>", ":BufferClose<CR>", {noremap = true, silent = true})
+--Wipeout buffer
+--                         :BufferWipeout<CR>", {noremap = true, silent = true})
+--Close commands
+--                         :BufferCloseAllButCurrent<CR>", {noremap = true, silent = true})
+--                         :BufferCloseBuffersLeft<CR>", {noremap = true, silent = true})
+--                         :BufferCloseBuffersRight<CR>", {noremap = true, silent = true})
+--Magic buffer-picking mode
+vim.api.nvim_set_keymap("n", "<C-s>", ":BufferPick<CR>", {noremap = true, silent = true})
+--Sort automatically by...
+vim.api.nvim_set_keymap("n", "<leader>bd", ":BufferOrderByDirectory<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>bl", ":BufferOrderByLanguage<CR>", {noremap = true, silent = true})
+
+--Other:
+--:BarbarEnable - enables barbar (enabled by default)
+--:BarbarDisable - very bad command, should never be used

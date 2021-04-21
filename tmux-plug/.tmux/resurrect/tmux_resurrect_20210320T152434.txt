@@ -1,0 +1,19 @@
+pane	0	1	:zsh	1	:*	1	:/home/huy	1	zsh	:
+pane	0	1	:zsh	1	:*	2	:/home/huy	0	zsh	:
+pane	cv-ranking	1	:tf	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/cv_ranking	1	nvim	:/tmp/.mount_nvim878o7d/usr/bin/nvim
+pane	cv-ranking	1	:tf	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/cv_ranking	0	zsh	:
+pane	data-mining	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	0	zsh	:
+pane	dip	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	1	zsh	:
+pane	dip	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	0	zsh	:
+pane	label-preproc	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	1	zsh	:
+pane	label-preproc	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	0	zsh	:
+pane	tut2adv	1	:python	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Self/tutorial2advance	1	zsh	:
+pane	tut2adv	1	:python	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Self/tutorial2advance	0	zsh	:
+window	0	1	1	:*	4ad2,190x44,0,0[190x8,0,0,0,190x35,0,9,1]
+window	cv-ranking	1	1	:*	49e4,190x44,0,0{138x44,0,0,2,51x44,139,0,3}
+window	data-mining	1	1	:*	49e9,190x44,0,0{138x44,0,0,4,51x44,139,0,5}
+window	dip	1	1	:*	2f1e,190x44,0,0{116x44,0,0,6,73x44,117,0,7}
+window	label-preproc	1	1	:*	49f3,190x44,0,0{138x44,0,0,8,51x44,139,0,9}
+window	tut2adv	1	1	:*	5ae0,190x44,0,0{121x44,0,0,10,68x44,122,0,11}
+state	cv-ranking	label-preproc

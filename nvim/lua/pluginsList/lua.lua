@@ -15,6 +15,7 @@ return require("packer").startup(
         -- nerdTree
         use {"preservim/nerdtree"}
 
+        -- buffer mananger
         use {"romgrk/barbar.nvim", 
             require = {"kyazdani42/nvim-web-devicons"}}
         use {"nvim-lua/plenary.nvim"}
@@ -53,6 +54,9 @@ return require("packer").startup(
         use {'DanilaMihailov/beacon.nvim'}
         use {'Xuyuanp/scrollbar.nvim'}
         use {'editorconfig/editorconfig-vim'}
+
+    -- Highlight current words
+        use {'lfv89/vim-interestingwords'}
   --[[ vim.cmd("CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()")
   vim.cmd("WinEnter,FocusGained           * silent! lua require('scrollbar').show()")
   vim.cmd("WinLeave,FocusLost             * silent! lua require('scrollbar').clear()") ]]
@@ -90,7 +94,7 @@ return require("packer").startup(
           -- Auto close parentheses
         use {'jiangmiao/auto-pairs'}
         
-        -- Resize windos by Ctrl-e
+        -- Resize windows by Ctrl-e
         use {'simeji/winresizer'}
         use {'rmagatti/auto-session'}
         -- vim.g.auto_session_root_dir = os.getenv("HOME") .. "./vim-session/"

@@ -1,0 +1,115 @@
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+# Done
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+on_event = 'BufReadPre'
+hook_source = '''
+    let g:indentLine_enabled = 1
+    let g:indentLine_char='┆'
+    let g:indentLine_fileTypeExclude = ['defx', 'denite','startify','tagbar','vista_kind','vista','coc-explorer','dashboard']
+    let g:indentLine_concealcursor = 'niv'
+    let g:indentLine_showFirstIndentLevel =1
+'''
+
+# Done
+[[plugins]]
+repo = 'tyru/caw.vim'
+depends = 'context_filetype.vim'
+on_map = { nx = '<Plug>' }
+
+[[plugins]]
+repo = 'liuchengxu/vista.vim'
+on_cmd = ['Vista', 'Vista!', 'Vista!!']
+hook_source = '''
+    let g:vista#renderer#enable_icon = 1
+    let g:vista_disable_statusline = 1
+    let g:vista_default_executive = 'ctags'
+    let g:vista_echo_cursor_strategy = 'floating_win'
+    let g:vista_vimwiki_executive = 'markdown'
+    let g:vista_executive_for = {
+      \ 'vimwiki': 'markdown',
+      \ 'pandoc': 'markdown',
+      \ 'markdown': 'toc',
+      \ 'yaml': 'coc',
+      \ 'typescript': 'coc',
+      \ 'typescriptreact': 'coc',
+      \ }
+'''
+
+# [[plugins]]
+# repo = 'ludovicchabant/vim-gutentags'
+# if = 'executable("ctags")'
+# on_event = ['BufReadPost', 'BufWritePost']
+# hook_source = '''
+#     let g:gutentags_cache_dir = $DATA_PATH . '/tags'
+#     let g:gutentags_project_root = ['.root', '.git', '.svn', '.hg', '.project','go.mod','/usr/local']
+#     let g:gutentags_generate_on_write = 1
+#     let g:gutentags_generate_on_missing = 1
+#     let g:gutentags_generate_on_new = 0
+#     let g:gutentags_exclude_filetypes = [ 'defx', 'denite', 'vista', 'magit' ]
+#     let g:gutentags_ctags_extra_args = ['--output-format=e-ctags']
+#     let g:gutentags_ctags_exclude = ['*.json', '*.js', '*.ts', '*.jsx', '*.css', '*.less', '*.sass', '*.go', '*.dart', 'node_modules', 'dist', 'vendor']
+# '''
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_cmd = 'QuickRun'
+hook_source = '''
+    let g:quickrun_config = {
+      \   "_" : {
+        \       "outputter" : "message",
+        \   },
+        \}
+    let g:quickrun_no_default_key_mappings = 1
+'''
+
+# Done
+[[plugins]]
+repo = 'jpalardy/vim-slime'
+on_ft = 'python'
+hook_source = '''
+		let g:slime_target = 'tmux'
+
+		" fix paste issues in ipython
+		let g:slime_python_ipython = 1
+
+		" always send text to the top-right pane in the current tmux tab without asking
+		let g:slime_default_config = {
+								\ 'socket_name': get(split($TMUX, ','), 0),
+								\ 'target_pane': '{top-right}' }
+		let g:slime_dont_ask_default = 1
+
+'''
+
+
+# Done
+# Current use
+[[plugins]]
+repo = 'hanschen/vim-ipython-cell'
+on_ft = 'python'
+
+
+# Done
+[[plugins]]
+repo = 'sakhnik/nvim-gdb'
+on_ft = 'python'
+
+
+[[plugins]]
+repo = 'pechorin/any-jump.vim'
+hook_source = '''
+	let g:any_jump_disable_default_keybindings = 1
+
+	" Custom ignore files
+	" default is: ['*.tmp', '*.temp']
+	let g:any_jump_ignored_files = ['*.tmp', '*.temp', '*.toml', '*.lua', '*.txt', '*.json']
+
+	" Prefered search engine: rg or ag
+	let g:any_jump_search_prefered_engine = 'rg'
+'''
+
+[[plugins]]
+repo = 'jeetsukumaran/vim-indentwise'

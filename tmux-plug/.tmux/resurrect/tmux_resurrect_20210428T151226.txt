@@ -1,0 +1,25 @@
+pane	ai-running	1	:zsh	1	:*	1	:/home/huy	1	zsh	:
+pane	cv-ranking	1	:tf	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment/cv_ranking	1	zsh	:
+pane	cv-ranking	1	:tf	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment/cv_ranking	0	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment/cv_parsing	0	nvim	:/tmp/.mount_nvimfmSk4s/usr/bin/nvim
+pane	cv_parsing	1	:zsh	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	python	:python -c import IPython; IPython.terminal.ipapp.launch_new_instance()
+pane	data-mining	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	0	zsh	:
+pane	dip	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	1	zsh	:
+pane	dip	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	0	zsh	:
+pane	label-preproc	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	1	zsh	:
+pane	label-preproc	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	0	zsh	:
+pane	main	1	:zsh	1	:*	1	:/home/huy	0	zsh	:
+pane	main	1	:zsh	1	:*	2	:/home/huy	0	zsh	:
+pane	main	1	:zsh	1	:*	3	:/home/huy	1	zsh	:
+pane	tut2adv	1	:python	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Self/tutorial2advance	1	zsh	:
+pane	tut2adv	1	:python	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Self/tutorial2advance	0	zsh	:
+window	ai-running	1	1	:*	bcbe,190x44,0,0,1
+window	cv-ranking	1	1	:*	49e4,190x44,0,0{138x44,0,0,2,51x44,139,0,3}
+window	cv_parsing	1	1	:*	49e9,190x44,0,0{138x44,0,0,4,51x44,139,0,5}
+window	data-mining	1	1	:*	49ee,190x44,0,0{138x44,0,0,6,51x44,139,0,7}
+window	dip	1	1	:*	2f23,190x44,0,0{116x44,0,0,8,73x44,117,0,9}
+window	label-preproc	1	1	:*	7a84,190x44,0,0{138x44,0,0,10,51x44,139,0,11}
+window	main	1	1	:*	8100,190x44,0,0[190x22,0,0,12,190x21,0,23{133x21,0,23,13,56x21,134,23,16}]
+window	tut2adv	1	1	:*	5ae6,190x44,0,0{121x44,0,0,14,68x44,122,0,15}
+state	cv_parsing	cv-ranking

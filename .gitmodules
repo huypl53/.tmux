@@ -1,6 +1,0 @@
-[submodule "nvim.k"]
-	path = nvim.k
-	url = https://github.com/vpeopleonatank/nvim
-[submodule "nvim/neovim-dots"]
-	path = nvim/neovim-dots
-	url = https://github.com/siduck76/neovim-dots

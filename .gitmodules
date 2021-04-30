@@ -1,0 +1,3 @@
+[submodule "nvim.k"]
+	path = nvim.k
+	url = https://github.com/vpeopleonatank/nvim

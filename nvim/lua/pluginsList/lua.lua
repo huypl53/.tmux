@@ -22,7 +22,7 @@ return require("packer").startup(
         use {"lewis6991/gitsigns.nvim"}
         use {"glepnir/galaxyline.nvim"}
         -- use {"akinsho/nvim-bufferline.lua"}
-        use {"907th/vim-auto-save"}
+        -- use {"907th/vim-auto-save"}
         use {"nvim-treesitter/nvim-treesitter"}
         use {"chriskempson/base16-vim"}
 
@@ -97,7 +97,8 @@ return require("packer").startup(
         -- Resize windows by Ctrl-e
         use {'simeji/winresizer'}
         use {'rmagatti/auto-session'}
-        -- vim.g.auto_session_root_dir = os.getenv("HOME") .. "./vim-session/"
+        vim.g.auto_session_root_dir = os.getenv("HOME") .. "/.vim-session/"
+
 
 -- clever-f.vim extends f, F, t and T mappings for more convenience. 
 -- Instead of ;, f is available to repeat after you type f{char} or F{char}. 

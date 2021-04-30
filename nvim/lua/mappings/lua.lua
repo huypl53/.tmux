@@ -305,15 +305,16 @@ vim.api.nvim_set_keymap("n", "<A-.>", ":BufferNext<CR>", {noremap = true, silent
 vim.api.nvim_set_keymap("n", "<A-<>", ":BufferMovePrevious<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<A->>", ":BufferMoveNext<CR>", {noremap = true, silent = true})
 --Goto buffer in position...
-vim.api.nvim_set_keymap("n", "<A-1>", ":BufferGoto 1<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<A-2>", ":BufferGoto 2<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<A-3>", ":BufferGoto 3<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<A-4>", ":BufferGoto 4<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<A-5>", ":BufferGoto 5<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<A-6>", ":BufferGoto 6<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<A-7>", ":BufferGoto 7<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<A-8>", ":BufferGoto 8<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<A-9>", ":BufferLast<CR>", {noremap = true, silent = true})
+-- vim.api.nvim_del_keymap("n", '<Tab>')
+vim.api.nvim_set_keymap("n", "z1", ":BufferGoto 1<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "z2", ":BufferGoto 2<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "z3", ":BufferGoto 3<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "z4", ":BufferGoto 4<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "z5", ":BufferGoto 5<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "z6", ":BufferGoto 6<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "z7", ":BufferGoto 7<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "z8", ":BufferGoto 8<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "z9", ":BufferLast<CR>", {noremap = true, silent = true})
 
 --Close buffer
 vim.api.nvim_set_keymap("n", "<A-c>", ":BufferClose<CR>", {noremap = true, silent = true})
@@ -332,3 +333,26 @@ vim.api.nvim_set_keymap("n", "<leader>bl", ":BufferOrderByLanguage<CR>", {norema
 --Other:
 --:BarbarEnable - enables barbar (enabled by default)
 --:BarbarDisable - very bad command, should never be used
+--
+
+
+
+-- nerdTree
+vim.api.nvim_command([[
+" Start NERDTree and put the cursor back in the other window.
+" autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTreeToggle
+
+" Exit Vim if NERDTree is the only window left.
+" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+"    \ quit | endif
+
+" Open the existing NERDTree on each new tab.
+" autocmd BufWinEnter * silent NERDTreeMirror
+
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+]])
+

@@ -1,2 +1,4 @@
 **packer_compiled.vim
 nvim/sessions/
+
+**.tmux/resurrect

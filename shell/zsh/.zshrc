@@ -139,7 +139,7 @@ alias intellijidea="/opt/idea-IU-201.7223.91/bin/idea.sh"
 alias subpenguin="/bin/./PenguinSubtitlePlayer"
 alias god="libreoffice '/mnt/01D322563C532490/dev_doc/God-mode.ods'"
 alias vfzf="nvim \$(fzf --height 70%)"
-alias lazygit="/home/huy/.bin/lazygit"
+# alias lazygit="/home/huy/.bin/lazygit"
 alias weka="/home/huy/Programs/weka-3-8-5/./weka.sh"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
@@ -195,3 +195,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ ! -f ~/.p10k-lean-8colors.zsh ]] || source ~/.p10k-lean-8colors.zsh
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+alias lg='lazygit'

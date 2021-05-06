@@ -52,7 +52,7 @@ return require("packer").startup(
         use {"sainnhe/sonokai"}
     -- Highlight current line
         use {'DanilaMihailov/beacon.nvim'}
-        use {'Xuyuanp/scrollbar.nvim'}
+        -- use {'Xuyuanp/scrollbar.nvim'}
         use {'editorconfig/editorconfig-vim'}
 
     -- Highlight current words
@@ -60,7 +60,7 @@ return require("packer").startup(
   --[[ vim.cmd("CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()")
   vim.cmd("WinEnter,FocusGained           * silent! lua require('scrollbar').show()")
   vim.cmd("WinLeave,FocusLost             * silent! lua require('scrollbar').clear()") ]]
---        use {"tanvirtin/monokai.nvim"}
+       use {"tanvirtin/monokai.nvim"}
 -- Faster motion
         use { 'easymotion/vim-easymotion'}
         use {"rhysd/accelerated-jk"}
@@ -81,6 +81,7 @@ return require("packer").startup(
 -- Version Control
         use {"simnalamburt/vim-mundo",
           cmd = 'MundoToggle'}
+        use {"sindrets/diffview.nvim"}
 
 -- Check missing parentheses
         use {"Yggdroot/hiPairs"}
@@ -96,8 +97,8 @@ return require("packer").startup(
         
         -- Resize windows by Ctrl-e
         use {'simeji/winresizer'}
-        use {'rmagatti/auto-session'}
-        vim.g.auto_session_root_dir = os.getenv("HOME") .. "/.vim-session/"
+        --[[ use {'rmagatti/auto-session'}
+        vim.g.auto_session_root_dir = os.getenv("HOME") .. "/.vim-session/" ]]
 
 
 -- clever-f.vim extends f, F, t and T mappings for more convenience. 
@@ -174,6 +175,8 @@ return require("packer").startup(
         use {'kevinhwang91/nvim-hlslens'}
         use {"lukas-reineke/indent-blankline.nvim", branch = 'lua'}
 
+        --vim-which-key is vim port of emacs-which-key that displays available keybindings in popup.
+        use {'liuchengxu/vim-which-key'}
     end
 )
 

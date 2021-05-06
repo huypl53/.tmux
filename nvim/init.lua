@@ -21,6 +21,7 @@ require("hlslen.lua")
 local cmd = vim.cmd
 local g = vim.g
 
+g.maplocalleader = ";"
 g.mapleader = " "
 g.auto_save = 1
 
@@ -41,12 +42,6 @@ g.indent_blankline_show_first_indent_level = false
 require("treesitter.lua")
 
 cmd("set relativenumber")
--- colorscheme
-
-cmd "colorscheme base16-monokai"
-cmd "syntax enable"
-cmd "syntax on"
-
 -- highlights
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
@@ -89,3 +84,9 @@ augroup NvimTree
  ]],
     false
 )
+-- colorscheme
+
+cmd "syntax enable"
+cmd "syntax on"
+cmd "colorscheme base16-monokai"
+

@@ -1,0 +1,27 @@
+pane	ai-recruitment	1	:tf	0	:#-	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	zsh	:
+pane	ai-recruitment	1	:tf	0	:#-	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	0	zsh	:
+pane	ai-recruitment	2	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	zsh	:
+pane	ai-recruitment	2	:zsh	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	0	zsh	:
+pane	ai-running	1	:zsh	1	:*	1	:/home/huy	1	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/chatbot	1	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/chatbot	0	zsh	:
+pane	data-mining	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	0	zsh	:
+pane	dip	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	1	zsh	:
+pane	dip	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	0	zsh	:
+pane	label-preproc	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	1	zsh	:
+pane	label-preproc	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	0	zsh	:
+pane	main	1	:zsh	1	:*	1	:/home/huy	0	zsh	:
+pane	main	1	:zsh	1	:*	2	:/home/huy	1	zsh	:
+pane	rasa	1	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/chatbot/chatbot	1	nvim	:/tmp/.mount_nvim8nkZvW/usr/bin/nvim
+pane	rasa	1	:zsh	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/chatbot/chatbot	0	zsh	:
+window	ai-recruitment	1	0	:#-	7500,90x27,0,0{88x27,0,0,1,1x27,89,0,2}
+window	ai-recruitment	2	1	:*	bf3f,90x27,0,0{76x27,0,0,3,13x27,77,0,4}
+window	ai-running	1	1	:*	bea2,90x27,0,0,5
+window	cv_parsing	1	1	:*	3f4d,90x27,0,0{76x27,0,0,6,13x27,77,0,7}
+window	data-mining	1	1	:*	f53b,90x27,0,0{88x27,0,0,8,1x27,89,0,9}
+window	dip	1	1	:*	b7ab,90x27,0,0{66x27,0,0,10,23x27,67,0,11}
+window	label-preproc	1	1	:*	2c43,90x27,0,0{88x27,0,0,12,1x27,89,0,13}
+window	main	1	1	:*	b99d,90x27,0,0[90x12,0,0,14,90x14,0,13,15]
+window	rasa	1	1	:*	a78e,190x44,0,0{105x44,0,0,16,84x44,106,0,21}
+state	rasa	cv_parsing

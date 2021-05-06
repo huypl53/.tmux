@@ -1,0 +1,18 @@
+pane	cv-ranking	1	:tf	1	:*Z	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment/cv_parsing	0	python	:python -c import IPython; IPython.terminal.ipapp.launch_new_instance()
+pane	cv-ranking	1	:tf	1	:*Z	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment/cv_parsing	1	nvim	:/tmp/.mount_nvimVpzThm/usr/bin/nvim
+pane	cv_parsing	1	:zsh	1	:*	1	:/home/huy	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	0	zsh	:
+pane	dip	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	1	zsh	:
+pane	dip	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	0	zsh	:
+pane	label-preproc	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	1	zsh	:
+pane	label-preproc	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	0	zsh	:
+pane	tut2adv	1	:python	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Self/tutorial2advance	1	zsh	:
+pane	tut2adv	1	:python	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Self/tutorial2advance	0	zsh	:
+window	cv-ranking	1	1	:*Z	b780,190x44,0,0{41x44,0,0,1,148x44,42,0,2}
+window	cv_parsing	1	1	:*	5e91,190x44,0,0,12
+window	data-mining	1	1	:*	dae8,190x46,0,0{138x46,0,0,3,51x46,139,0,4}
+window	dip	1	1	:*	c01d,190x46,0,0{116x46,0,0,5,73x46,117,0,6}
+window	label-preproc	1	1	:*	daf2,190x46,0,0{138x46,0,0,7,51x46,139,0,8}
+window	tut2adv	1	1	:*	0c4c,190x46,0,0{121x46,0,0,9,68x46,122,0,10}
+state	cv_parsing	cv-ranking

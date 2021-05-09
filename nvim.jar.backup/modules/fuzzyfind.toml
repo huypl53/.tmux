@@ -1,0 +1,99 @@
+# Vim-clap is a modern generic interactive finder and dispatcher, 
+# based on the newly feature: floating_win of neovim or popup of vim.
+# The goal of vim-clap is to work everywhere out of the box, with fast response.
+[[plugins]]
+repo = 'liuchengxu/vim-clap'
+merged = 0
+build = 'bash install.sh'
+on_map = { n = '<Plug>' }
+hook_source = '''
+    let s:zshrc = expand($HOME . '/.zshrc')
+    let s:tmux_conf = expand($HOME . '/.tmux.conf')
+    let g:clap_cache_directory = $DATA_PATH . '/clap'
+    let g:clap_theme = 'material_design_dark'
+    let g:clap_current_selection_sign= { 'text': '➤', 'texthl': "ClapCurrentSelectionSign", "linehl": "ClapCurrentSelection"}
+    let g:clap_layout = { 'relative': 'editor' }
+    let g:clap_enable_icon = 1
+    let g:clap_search_box_border_style = 'curve'
+    let g:clap_provider_grep_enable_icon = 1
+    let g:clap_prompt_format = '%spinner%%forerunner_status% %provider_id%: '
+    let g:clap_provider_personalconf = {
+          \ 'source': [s:zshrc,s:tmux_conf],
+          \ 'sink': 'e',
+          \ }
+
+    " A funtion to config highlight of ClapSymbol
+    " when the background color is opactiy
+    function! s:ClapSymbolHL() abort
+        let s:current_bgcolor = synIDattr(hlID("Normal"), "bg")
+        if s:current_bgcolor == ''
+            hi ClapSymbol guibg=NONE ctermbg=NONE
+        endif
+    endfunction
+
+    autocmd User ClapOnEnter call s:ClapSymbolHL()
+'''
+
+[[plugins]]
+repo = 'vn-ki/coc-clap'
+on_source = 'vim-clap'
+
+
+[[plugins]]
+repo = 'brooth/far.vim'
+hook_source = '''
+	set lazyredraw            " improve scrolling performance when navigating through large results
+	set regexpengine=1        " use old regexp engine
+	set ignorecase smartcase  " ignore case only when the pattern contains no capital letters
+	let g:far#source='rg'
+	let g:far#window_width = 50
+	let g:far#preview_window_width = 50
+	let g:far#prompt_mapping = {
+        \ 'quit'           : { 'key' : '<esc>', 'prompt' : 'Esc' },
+        \ 'regex'          : { 'key' : '<C-x>', 'prompt' : '^X'  },
+        \ 'case_sensitive' : { 'key' : '<C-a>', 'prompt' : '^A'  },
+        \ 'word'           : { 'key' : '<C-w>', 'prompt' : "^W"  },
+        \ 'substitute'     : { 'key' : '<C-f>', 'prompt' : '^F'  },
+        \ }
+'''
+
+[[plugins]]
+repo = 'eugen0329/vim-esearch'
+hook_source = """
+	" Use <c-f><c-f> to start the prompt, use <c-f>iw to pre-fill with the current word
+	" or other text-objects. Try <plug>(esearch-exec) to start a search instantly.
+	" nmap <c-f><c-f> <plug>(esearch)
+	nmap <c-f><c-f> <plug>(esearch)
+	map  <c-f>      <plug>(operator-esearch-prefill)
+
+	let g:esearch = {}
+
+	" Use regex matching with the smart case mode by default and avoid matching text-objects.
+	let g:esearch.regex   = 1
+	let g:esearch.textobj = 0
+	let g:esearch.case    = 'smart'
+
+	" Set the initial pattern content using the highlighted '/' pattern (if
+	" v:hlsearch is true), the last searched pattern or the clipboard content.
+	let g:esearch.prefill = ['hlsearch', 'last', 'clipboard']
+
+	" Override the default files and directories to determine your project root. Set it
+	" to blank to always use the current working directory.
+	let g:esearch.root_markers = ['.git', 'Makefile', 'node_modules']
+
+	" Prevent esearch from adding any default keymaps.
+	let g:esearch.default_mappings = 0
+
+	" Start the search only when the enter is hit instead of updating the pattern while you're typing.
+	let g:esearch.live_update = 0
+
+	" Open the search window in a vertical split and reuse it for all further searches.
+	let g:esearch.name = '[esearch]'
+	let g:esearch.win_new = {esearch -> esearch#buf#goto_or_open(esearch.name, 'vnew')}
+
+	" Redefine the default highlights (see :help highlight and :help esearch-appearance)
+	highlight      esearchHeader     cterm=bold gui=bold ctermfg=white ctermbg=white
+	highlight link esearchStatistics esearchFilename
+	highlight link esearchFilename   Label
+	highlight      esearchMatch      ctermbg=27 ctermfg=15 guibg='#005FFF' guifg='#FFFFFF'
+"""

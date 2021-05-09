@@ -1,0 +1,25 @@
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+on_cmd = [ 'G', 'Git', 'Gfetch', 'Gpush', 'Glog', 'Gclog', 'Gdiffsplit' ]
+hook_source = '''
+    augroup user_fugitive_plugin
+      autocmd!
+      autocmd FileType fugitiveblame normal A
+    augroup END
+'''
+
+[[plugins]]
+repo = 'rhysd/committia.vim'
+on_path = [ 'COMMIT_EDITMSG', 'MERGE_MSG' ]
+hook_source = '''
+	let g:committia_min_window_width = 7
+'''
+
+[[plugins]]
+repo= 'alpertuna/vim-header'
+hook_source = '''
+	let g:header_auto_add_header = 0
+	let g:header_field_author = 'phamlehuy53'
+	let g:header_field_author_email = 'unknownsol98@gmail'
+'''

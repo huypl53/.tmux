@@ -2,6 +2,6 @@
 	path = shell/zsh/.oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
 
-[submodule "nvim"]
+[submodule "neovim-dotfiles"]
 	path = nvim
-	url = https://github.com/phamlehuy53/dotfiles
+	url = https://github.com/phamlehuy53/neovim-dotfiles.git

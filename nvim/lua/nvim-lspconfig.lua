@@ -36,13 +36,19 @@ function on_attach(client)
 end
 
 local lspconf = require "lspconfig"
-local servers = {"html", "cssls", "tsserver", "pyright" , "bashls"}
+local servers = {"html", "cssls", "tsserver", "pyright", "bashls", "vls", "clangd", "ccls"}
 
 for k, lang in pairs(servers) do
     lspconf[lang].setup {
         root_dir = vim.loop.cwd
     }
 end
+
+-- remove the lsp servers with their configs you don want
+local vls_binary = '/usr/local/bin/vls'
+require'lspconfig'.vls.setup {
+  cmd = {vls_binary},
+}
 
 -- lua lsp settings
 USER = "/home/" .. vim.fn.expand("$USER")
@@ -76,3 +82,54 @@ require "lspconfig".sumneko_lua.setup {
         }
     }
 }
+
+-- replace the default lsp diagnostic letters with prettier symbols
+vim.fn.sign_define("LspDiagnosticsSignError", {text = "", numhl = "LspDiagnosticsDefaultError"})
+vim.fn.sign_define("LspDiagnosticsSignWarning", {text = "", numhl = "LspDiagnosticsDefaultWarning"})
+vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", numhl = "LspDiagnosticsDefaultInformation"})
+vim.fn.sign_define("LspDiagnosticsSignHint", {text = "", numhl = "LspDiagnosticsDefaultHint"})
+
+-- diagnostics highlights
+
+local cmd = vim.cmd
+
+cmd "hi LspDiagnosticsSignError guifg=#f9929b"
+cmd "hi LspDiagnosticsVirtualTextError guifg=#BF616A"
+
+cmd "hi LspDiagnosticsSignWarning guifg=#EBCB8B"
+cmd "hi LspDiagnosticsVirtualTextWarning guifg=#EBCB8B"
+
+cmd "hi LspDiagnosticsSignInformation guifg=#A3BE8C"
+cmd "hi LspDiagnosticsVirtualTextInformation guifg=#A3BE8C"
+
+cmd "hi LspDiagnosticsSignHint guifg=#b6bdca"
+cmd "hi LspDiagnosticsVirtualTextHint guifg=#b6bdca"
+
+
+--  lsp for html , css and js/ts
+require "lspconfig".tsserver.setup {}
+require "lspconfig".cssls.setup {}
+require "lspconfig".html.setup {}
+require "lspconfig".pyright.setup {
+  on_attach = function(client, bufnr)
+    require "lsp_signature".on_attach({
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+               -- If you want to hook lspsaga or other signature handler, pls set to false
+  doc_lines = 10, -- only show one line of comment set to 0 if you do not want API comments be shown
+
+  hint_enable = true, -- virtual hint enable
+  hint_prefix = "🐼 ",  -- Panda for parameter
+  hint_scheme = "String",
+
+  handler_opts = {
+    border = "shadow"   -- double, single, shadow, none
+  },
+  decorator = {"`", "`"}  -- or decorator = {"***", "***"}  decorator = {"**", "**"} see markdown help
+
+
+    })
+
+  end,-- Note: add in lsp client on-attach
+}
+
+require "surround".setup{}

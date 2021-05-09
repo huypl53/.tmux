@@ -1,77 +1,95 @@
--- check if packer is installed (~/local/share/nvim/site/pack)
-local packer_exists = pcall(vim.cmd, [[packadd packer.nvim]])
+local packer = require("packer")
+local use = packer.use
 
+-- using { } for using different branch , loading plugin with certain commands etc
 return require("packer").startup(
     function()
-        use {"wbthomason/packer.nvim", opt = true}
-        use {"kyazdani42/nvim-web-devicons"}
+        use "wbthomason/packer.nvim"
 
-        -- Tree Explorer
-        use {"kyazdani42/nvim-tree.lua"}
-        -- A Lua module to interactive with system processes. 
-        -- Pass in your command, the desired args, env and cwd. 
-        -- Define optional callbacks for on_stdout, on_stderr and on_exit and start your Job.
+        -- color related stuff
+        use "siduck76/nvim-base16.lua"
+        use "norcalli/nvim-colorizer.lua"
+        -- use "ollykel/v-vim" -- v syntax highlighter
 
-        -- nerdTree
-        use {"preservim/nerdtree"}
+        -- lsp stuff
+        use "nvim-treesitter/nvim-treesitter"
+        use "neovim/nvim-lspconfig"
+        use "hrsh7th/nvim-compe"
+        use "onsails/lspkind-nvim"
+        use "sbdchd/neoformat"
+        use "nvim-lua/plenary.nvim"
+        use "ray-x/lsp_signature.nvim"
 
-        -- buffer mananger
-        use {"romgrk/barbar.nvim", 
-            require = {"kyazdani42/nvim-web-devicons"}}
-        use {"nvim-lua/plenary.nvim"}
-        use {"lewis6991/gitsigns.nvim"}
-        use {"glepnir/galaxyline.nvim"}
-        -- use {"akinsho/nvim-bufferline.lua"}
+        use "lewis6991/gitsigns.nvim"
+        use "akinsho/nvim-bufferline.lua"
+        use "glepnir/galaxyline.nvim"
+        use "windwp/nvim-autopairs"
+        use "alvan/vim-closetag"
+        
+        -- snippet support
+        use "hrsh7th/vim-vsnip"
+        use "rafamadriz/friendly-snippets"
+
+        -- file managing , picker etc
+        use "kyazdani42/nvim-tree.lua"
+        use "kyazdani42/nvim-web-devicons"
+        use "ryanoasis/vim-devicons"
+        use "nvim-telescope/telescope.nvim"
+        use "nvim-telescope/telescope-media-files.nvim"
+        use "nvim-lua/popup.nvim"
+            -- nerdTree
+            use {"preservim/nerdtree"}
+
+
+        -- misc
+        use "tweekmonster/startuptime.vim"
+        use "907th/vim-auto-save"
+        use "karb94/neoscroll.nvim"
+        use "kdav5758/TrueZen.nvim"
+
+        -- discord rich presence
+        --use "andweeb/presence.nvim"
+
+        use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
+
+
+        -- neovim session
+        -- session manager
+        -- use {'rmagatti/auto-session'}
+        -- vim.g.auto_session_root_dir = os.getenv("HOME") .. "/.vim-session/"
+
+
+
+        -- Searching
+        -- nvim-hlslens helps you better glance searched information, seamlessly jump matched instances.
+        -- 3 ways to start hlslens
+        --[[ Press / or ? to search text
+        Press n or N to jump to the instance matched by last pattern
+        Press *, #, g* or g# to search word nearest to the cursor ]]
+        use {'kevinhwang91/nvim-hlslens'}
+
+
+        -- buffer manager
+        -- use {"romgrk/barbar.nvim", 
+        --     require = {"kyazdani42/nvim-web-devicons"}}
+        -- vim.api.nvim_set_var("bufferline.animation", false)
+
+
+        -- TODO:
         -- use {"907th/vim-auto-save"}
-        use {"nvim-treesitter/nvim-treesitter"}
         use {"chriskempson/base16-vim"}
 
-        use {"norcalli/nvim-colorizer.lua"}
-        -- use {'Yggdroot/indentLine'}
-        use {"ryanoasis/vim-devicons"}
-
-
-        -- A (Neo)vim plugin for formatting code.
-        -- :Neoformat! python
-        -- :Neoformat! python yapf
-        use {"sbdchd/neoformat"}
-        use {"neovim/nvim-lspconfig"}
-        -- Auto completion plugin for nvim.
-        use {"hrsh7th/nvim-compe"}
-        use {"windwp/nvim-autopairs"}
-        use {"alvan/vim-closetag"}
-        use {"tweekmonster/startuptime.vim"}
-        use {"onsails/lspkind-nvim"}
-
-        -- highly extendable fuzzy finder over lists
-        use {"nvim-telescope/telescope.nvim"}
-        use {"nvim-telescope/telescope-media-files.nvim"}
-        use {"nvim-lua/popup.nvim"}
-
--- UI
-        use {"sainnhe/sonokai"}
-    -- Highlight current line
-        use {'DanilaMihailov/beacon.nvim'}
-        -- use {'Xuyuanp/scrollbar.nvim'}
-        use {'editorconfig/editorconfig-vim'}
-
-    -- Highlight current words
+        use "DanilaMihailov/beacon.nvim"
+        use "editorconfig/editorconfig-vim"
+        use "ray-x/aurora"
+            -- Highlight current words
         use {'lfv89/vim-interestingwords'}
-  --[[ vim.cmd("CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()")
-  vim.cmd("WinEnter,FocusGained           * silent! lua require('scrollbar').show()")
-  vim.cmd("WinLeave,FocusLost             * silent! lua require('scrollbar').clear()") ]]
-       use {"tanvirtin/monokai.nvim"}
--- Faster motion
-        use { 'easymotion/vim-easymotion'}
-        use {"rhysd/accelerated-jk"}
-
-        -- It's called vim-visual-multi in analogy with visual-block, but the plugin works mostly from normal mode.
-        -- use {"mg979/vim-visual-multi"}
-
-        -- use {"romainl/vim-qf"}
+        use "tanvirtin/monokai.nvim"
+        use "easymotion/vim-easymotion"
+        use "rhysd/accelerated-jk"
 
 
-  -- Assign mark, rename
+          -- Assign mark, rename
         use {'Yilin-Yang/vim-markbar'}
         -- width of a vertical split markbar
 	vim.g.markbar_width = 40
@@ -97,10 +115,6 @@ return require("packer").startup(
         
         -- Resize windows by Ctrl-e
         use {'simeji/winresizer'}
-
-        -- session manager
-        use {'rmagatti/auto-session'}
-        vim.g.auto_session_root_dir = os.getenv("HOME") .. "/.vim-session/"
 
 
 
@@ -140,12 +154,12 @@ return require("packer").startup(
           ft = {'python'}}
 
         
-    --[[ zo: Open a fold
-    zc: Close a fold
-    zk: Jump to the previous fold.
-    zj: Jump to the next fold.
-    zR: Open every fold.
-    zM: Close every fold. ]]
+      --[[ zo: Open a fold
+      zc: Close a fold
+      zk: Jump to the previous fold.
+      zj: Jump to the next fold.
+      zR: Open every fold.
+      zM: Close every fold. ]]
         use {'kalekundert/vim-coiled-snake',
           ft = {'python'},
           requires={'Konfekt/FastFold'}}
@@ -159,6 +173,9 @@ return require("packer").startup(
 	--Prefered search engine: rg or ag
 	vim.g.any_jump_search_prefered_engine = 'rg'
 
+        
+        -- Easy code navigation through LSP and Treesitter symbols, diagnostic errors.
+        -- use {"ray-x/navigator.lua"}
 
   -- Generate docstring
         use {'kkoomen/vim-doge',
@@ -167,19 +184,17 @@ return require("packer").startup(
 -- Neovim plugin to comment text in and out, written in lua. Supports commenting out the current line, a visual selection and a motion.
         use {'b3nj5m1n/kommentary'}
 
+
+
         -- 
         use {'thiagoalessio/rainbow_levels.vim'}
 
-        -- nvim-hlslens helps you better glance searched information, seamlessly jump matched instances.
-    -- 3 ways to start hlslens
-      --[[ Press / or ? to search text
-      Press n or N to jump to the instance matched by last pattern
-      Press *, #, g* or g# to search word nearest to the cursor ]]
-        use {'kevinhwang91/nvim-hlslens'}
-        use {"lukas-reineke/indent-blankline.nvim", branch = 'lua'}
-
         --vim-which-key is vim port of emacs-which-key that displays available keybindings in popup.
         use {'liuchengxu/vim-which-key'}
-    end
+    end,
+    {
+        display = {
+            border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" }
+        }
+    }
 )
-

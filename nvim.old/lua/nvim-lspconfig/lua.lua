@@ -16,7 +16,7 @@ buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
 buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
 buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+buf_set_keymap("n", "<M-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
 buf_set_keymap("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
 buf_set_keymap("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
@@ -32,6 +32,26 @@ buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>",
 require "lspconfig".tsserver.setup {}
 require "lspconfig".cssls.setup {}
 require "lspconfig".html.setup {}
-require "lspconfig".pyright.setup {}
+require "lspconfig".pyright.setup {
+  on_attach = function(client, bufnr)
+    require "lsp_signature".on_attach({
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+               -- If you want to hook lspsaga or other signature handler, pls set to false
+  doc_lines = 10, -- only show one line of comment set to 0 if you do not want API comments be shown
+
+  hint_enable = true, -- virtual hint enable
+  hint_prefix = "🐼 ",  -- Panda for parameter
+  hint_scheme = "String",
+
+  handler_opts = {
+    border = "shadow"   -- double, single, shadow, none
+  },
+  decorator = {"`", "`"}  -- or decorator = {"***", "***"}  decorator = {"**", "**"} see markdown help
+
+
+    })
+
+  end,-- Note: add in lsp client on-attach
+}
 
 require "surround".setup{}

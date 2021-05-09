@@ -2,8 +2,22 @@
 BASE=$(git rev-parse --show-toplevel)
 LSP_BIN_PATH=$HOME/.local/bin
 
-default_lsp_langs="css html ts rust"
-lsp_langs=${@:-"$default_lsp_langs"}
+default_lsp_langs="css html ts rust python bash json"
+lsp_langs=""
+
+choose_langs() {
+  read -p "Would you like to install $1 lsp?(y/n)" lang
+  if [ "$lang" = "y" ]; then
+    lsp_langs+="$1 "
+  fi
+}
+
+for lang in $default_lsp_langs; do
+  choose_langs $lang
+done
+
+# install npm pkg global
+npm config set prefix=~/.node_modules 
 
 pfx="~~~~~ "
 heading() {
@@ -13,25 +27,42 @@ heading() {
 
 get_platform() {
   case "$(uname -s)" in
-    Linux*)     platform=Linux;;
-    Darwin*)    platform=Mac;;
-    CYGWIN*)    platform=Cygwin;;
-    MINGW*)     platform=MinGw;;
-    *)          platform="UNKNOWN:${unameOut}"
+  Linux*) platform=Linux ;;
+  Darwin*) platform=Mac ;;
+  CYGWIN*) platform=Cygwin ;;
+  MINGW*) platform=MinGw ;;
+  *) platform="UNKNOWN:${unameOut}" ;;
   esac
   echo $platform
 }
 
+heading "installing packer"
+
+if [[ ! -e ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]]; then
+  heading "Installing packer"
+  git clone https://github.com/wbthomason/packer.nvim \
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
+
 heading "Linking config"
-heading "old nvim config will be deleted"
+heading "old nvim config will be deleted so watchout :0"
 
-# copying config 
+# copying config
 
-cd .. && cp -r neovim-dots ~/.config
-mv ~/.config/neovim-dots ~/.config/nvim
-rm -rf ~/.config/nvim/.git
-rm -rf ~/.config/nvim/install.sh
-rm -rf ~/.config/nvim/README.md
+rm -rf ~/.config/nvim/ && mkdir -p ~/.config/nvim
+cp -r init.lua ~/.config/nvim && cp -r lua ~/.config/nvim
+
+# change shell for nvim
+read -p "which shell do you use?: " shellname
+echo "$shellname"
+
+if [ "$(get_platform)" = "Mac" ]; then
+  gsed -i "s/bash/$shellname/g" ~/.config/nvim/lua/mappings.lua
+else
+  sed -i "s/bash/$shellname/g" ~/.config/nvim/lua/mappings.lua
+fi
+
+echo "shell changed to $shellname on nvim successfully!"
 
 #for f in `find -E . -regex ".*\.vim$|.*\.lua$"`; do
 #  p=${f#*/}
@@ -42,27 +73,23 @@ rm -rf ~/.config/nvim/README.md
 #  ln -s ${BASE}/${p} ~/.config/nvim/${p}
 #done
 
-if [[ ! -e ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]]; then
-  heading "Installing packer"
-  git clone https://github.com/wbthomason/packer.nvim\
-    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-fi
-
-heading "Installing plugins"
+#heading "Installing plugins"
 #nvim --headless +PackerInstall +qa
 #nvim --headless +TSUpdate +qa
 echo
 
-fn_exists() { declare -F "$1" > /dev/null; }
+fn_exists() { declare -F "$1" >/dev/null; }
 warn_path=false
 
-install_node_deps () {
+install_node_deps() {
   if [[ -z $(which npm) ]]; then
     echo "npm not installed"
     return
   fi
- sudo npm install -g $@
+  npm install -g $@
 }
+
+# install languages
 
 install_ts() {
   install_node_deps typescript typescript-language-server prettier
@@ -76,6 +103,10 @@ install_css() {
   install_node_deps vscode-css-languageserver-bin
 }
 
+install_json() {
+  install_node_deps vscode-json-languageserver
+}
+
 install_rust() {
   if [[ ! -e ~/.local/bin/rust-analyzer ]]; then
     mkdir -p ${LSP_BIN_PATH}
@@ -87,17 +118,31 @@ install_rust() {
   fi
 }
 
+install_python() {
+  install_node_deps pyright
+}
+
+install_bash() {
+  install_node_deps bash-language-server
+}
+
 for lang in ${lsp_langs}; do
-  if fn_exists install_$lang ; then
+  if fn_exists install_$lang; then
     heading "Installing $lang language server"
     install_$lang
   else
     echo $lang setup not implemented
-    echo 
+    echo
   fi
 done
 
-if [[ ${warn_path} = true ]]; then
+if [[ ${warn_path} == true ]]; then
   echo ""
   echo "Ensure ${LSP_BIN_PATH} is available in your \$PATH variable"
 fi
+
+echo "add ~/.node_modules/bin at PATH!"
+
+# install all plugins via packer
+
+nvim +PackerInstall

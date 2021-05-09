@@ -1,0 +1,88 @@
+# Done
+# sandwich.vim is a set of operator and textobject plugins to add/delete/replace 
+# surroundings of a sandwiched textobject, like (foo), "bar".
+[[plugins]]
+repo = 'machakann/vim-sandwich'
+on_map = { vonx = '<Plug>(operator-sandwich-' }
+hook_add = '''
+    let g:sandwich_no_default_key_mappings = 1
+    let g:operator_sandwich_no_default_key_mappings = 1
+    let g:textobj_sandwich_no_default_key_mappings = 1
+'''
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'kana/vim-operator-replace'
+on_map = { vnx = '<Plug>' }
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+on_map = { x = '<Plug>' }
+
+# Done
+[[plugins]]
+repo = 'AndrewRadev/splitjoin.vim'
+# on_map = { n = '<Plug>Splitjoin' }
+
+# The plugin defines a mapping to delete a surrounding function call (or something similar to one), 
+# even if it happens to be namespaced
+[[plugins]]
+repo = 'AndrewRadev/dsf.vim'
+on_map = { n = '<Plug>Dsf' }
+hook_add = '''
+	let g:dsf_no_mappings = 1
+'''
+
+[[plugins]]
+repo = 'kana/vim-niceblock'
+on_map = { x = '<Plug>' }
+hook_add = '''
+	let g:niceblock_no_default_key_mappings = 0
+'''
+[[plugins]]
+repo = 'osyo-manga/vim-textobj-multiblock'
+on_map = { ox = '<Plug>' }
+hook_add = '''
+	let g:textobj_multiblock_no_default_key_mappings = 1
+'''
+
+# vim-textobj-function is a Vim plugin to text objects for functions.
+# You can directly target a function (af) or the code inside a function (if).
+[[plugins]]
+repo = 'kana/vim-textobj-function'
+on_map = { ox = '<Plug>' }
+hook_add = '''
+	let g:textobj_function_no_default_key_mappings = 1
+'''
+
+# Open a sidebar that shows you every mark that
+# you can access from your current buffer, as well
+# as the contexts in which those marks appear.
+[[plugins]]
+repo = 'Yilin-Yang/vim-markbar'
+hook_add = '''
+	" width of a vertical split markbar
+	let g:markbar_width = 40
+	let g:markbar_enable_peekaboo = v:false
+	"let g:markbar_peekaboo_backtick_mapping = ''
+'''
+
+# Whenever cursor jumps some distance or moves between
+# windows, it will flash so you can see where it is.
+[[plugins]]
+repo = 'DanilaMihailov/beacon.nvim'
+
+[[plugins]]
+repo = 'kalekundert/vim-coiled-snake'
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+# hook_add = '''
+	#set foldmethod=expr
+	#set foldexpr=nvim_treesitter#foldexpr()
+# '''

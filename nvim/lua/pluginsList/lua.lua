@@ -97,8 +97,11 @@ return require("packer").startup(
         
         -- Resize windows by Ctrl-e
         use {'simeji/winresizer'}
-        --[[ use {'rmagatti/auto-session'}
-        vim.g.auto_session_root_dir = os.getenv("HOME") .. "/.vim-session/" ]]
+
+        -- session manager
+        use {'rmagatti/auto-session'}
+        vim.g.auto_session_root_dir = os.getenv("HOME") .. "/.vim-session/"
+
 
 
 -- clever-f.vim extends f, F, t and T mappings for more convenience. 

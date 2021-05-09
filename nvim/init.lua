@@ -4,6 +4,7 @@ require("web-devicons.lua")
 
 require("utils.lua")
 require("nerdTree.lua")
+require("auto-session.lua")
 -- require("nvimTree.lua")
 -- require("bufferline.lua")
 require("statusline.lua")
@@ -14,6 +15,7 @@ require "colorizer".setup()
 
 -- lsp
 require("nvim-lspconfig.lua")
+require("lspconfig.lua")
 require("nvim-compe.lua")
 
 require("hlslen.lua")

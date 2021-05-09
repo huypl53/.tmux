@@ -1,7 +1,0 @@
-[submodule "shell/zsh/.oh-my-zsh"]
-	path = shell/zsh/.oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
-
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/phamlehuy53/dotfiles

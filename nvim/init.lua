@@ -1,3 +1,9 @@
+local cmd = vim.cmd
+local g = vim.g
+
+g.maplocalleader = ";"
+g.mapleader = " "
+g.auto_save = 1
 -- load all plugins
 require("pluginsList.lua")
 require("web-devicons.lua")
@@ -19,13 +25,6 @@ require("lspconfig.lua")
 require("nvim-compe.lua")
 
 require("hlslen.lua")
-
-local cmd = vim.cmd
-local g = vim.g
-
-g.maplocalleader = ";"
-g.mapleader = " "
-g.auto_save = 1
 
 
 -- blankline

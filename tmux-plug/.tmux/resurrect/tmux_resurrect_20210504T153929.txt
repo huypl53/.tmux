@@ -1,0 +1,26 @@
+pane	ai-recruitment	1	:tf	0	:-	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	zsh	:
+pane	ai-recruitment	1	:tf	0	:-	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	0	zsh	:
+pane	ai-recruitment	2	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	zsh	:
+pane	ai-running	1	:zsh	1	:*	1	:/home/huy	1	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment/cv_parsing	0	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	0	zsh	:
+pane	dip	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	1	zsh	:
+pane	dip	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	0	zsh	:
+pane	label-preproc	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	1	zsh	:
+pane	label-preproc	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	0	zsh	:
+pane	main	1	:zsh	1	:*	1	:/home/huy	0	zsh	:
+pane	main	1	:zsh	1	:*	2	:/home/huy	1	zsh	:
+pane	rasa	1	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/chatbot	1	zsh	:
+pane	rasa	1	:zsh	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/chatbot	0	python	:python -c import IPython; IPython.terminal.ipapp.launch_new_instance()
+window	ai-recruitment	1	0	:-	c9e1,190x44,0,0{138x44,0,0,1,51x44,139,0,2}
+window	ai-recruitment	2	1	:*	5e93,190x44,0,0,14
+window	ai-running	1	1	:*	bcc0,190x44,0,0,3
+window	cv_parsing	1	1	:*	49e9,190x44,0,0{138x44,0,0,4,51x44,139,0,5}
+window	data-mining	1	1	:*	49ee,190x44,0,0{138x44,0,0,6,51x44,139,0,7}
+window	dip	1	1	:*	2f23,190x44,0,0{116x44,0,0,8,73x44,117,0,9}
+window	label-preproc	1	1	:*	7a84,190x44,0,0{138x44,0,0,10,51x44,139,0,11}
+window	main	1	1	:*	87d7,190x44,0,0[190x21,0,0,12,190x22,0,22,13]
+window	rasa	1	1	:*	efff,190x44,0,0{145x44,0,0,15,44x44,146,0,16}
+state	rasa	ai-recruitment

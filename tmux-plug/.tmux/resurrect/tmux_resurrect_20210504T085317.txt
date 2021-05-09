@@ -1,0 +1,21 @@
+pane	ai-recruitment	1	:tf	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	nvim	:/tmp/.mount_nvimEvBX5S/usr/bin/nvim
+pane	ai-recruitment	1	:tf	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	0	zsh	:
+pane	ai-running	1	:zsh	1	:*	1	:/home/huy	1	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment/cv_parsing	0	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	0	zsh	:
+pane	dip	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	1	zsh	:
+pane	dip	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	0	zsh	:
+pane	label-preproc	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	1	zsh	:
+pane	label-preproc	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	0	zsh	:
+pane	main	1	:zsh	1	:*	1	:/home/huy	0	zsh	:
+pane	main	1	:zsh	1	:*	2	:/home/huy	1	zsh	:
+window	ai-recruitment	1	1	:*	dae3,190x46,0,0{138x46,0,0,1,51x46,139,0,2}
+window	ai-running	1	1	:*	c4c0,190x46,0,0,3
+window	cv_parsing	1	1	:*	5aeb,190x46,0,0{138x46,0,0,4,51x46,139,0,5}
+window	data-mining	1	1	:*	5af0,190x46,0,0{138x46,0,0,6,51x46,139,0,7}
+window	dip	1	1	:*	4025,190x46,0,0{116x46,0,0,8,73x46,117,0,9}
+window	label-preproc	1	1	:*	ff04,190x46,0,0{138x46,0,0,10,51x46,139,0,11}
+window	main	1	1	:*	1a58,190x46,0,0[190x22,0,0,12,190x23,0,23,13]
+state	ai-recruitment	label-preproc

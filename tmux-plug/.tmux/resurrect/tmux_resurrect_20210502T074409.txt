@@ -1,0 +1,21 @@
+pane	ai-running	1	:zsh	1	:*	1	:/home/huy	1	zsh	:
+pane	cv-ranking	1	:tf	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	zsh	:
+pane	cv-ranking	1	:tf	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	0	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment/cv_parsing	0	zsh	:
+pane	cv_parsing	1	:zsh	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/NLP/recruitment	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	1	zsh	:
+pane	data-mining	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/data_mining/ml	0	zsh	:
+pane	dip	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	1	zsh	:
+pane	dip	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_doc/DL/code/self/image_processing	0	zsh	:
+pane	label-preproc	1	:nvim	1	:*	1	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	1	zsh	:
+pane	label-preproc	1	:nvim	1	:*	2	:/mnt/01D322563C532490/dev_project/Python/Data_Generator/validate	0	zsh	:
+pane	main	1	:zsh	1	:*	1	:/home/huy	1	zsh	:
+pane	main	1	:zsh	1	:*	2	:/home/huy	0	zsh	:
+window	ai-running	1	1	:*	c4be,190x46,0,0,1
+window	cv-ranking	1	1	:*	49e4,190x44,0,0{138x44,0,0,2,51x44,139,0,3}
+window	cv_parsing	1	1	:*	5aeb,190x46,0,0{138x46,0,0,4,51x46,139,0,5}
+window	data-mining	1	1	:*	5af0,190x46,0,0{138x46,0,0,6,51x46,139,0,7}
+window	dip	1	1	:*	4025,190x46,0,0{116x46,0,0,8,73x46,117,0,9}
+window	label-preproc	1	1	:*	ff04,190x46,0,0{138x46,0,0,10,51x46,139,0,11}
+window	main	1	1	:*	9957,190x44,0,0[190x22,0,0,12,190x21,0,23,13]
+state	cv-ranking	main

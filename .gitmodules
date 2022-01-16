@@ -1,10 +1,11 @@
 [submodule "tpm"]
-        path = tpm
-        url = https://github.com/tmux-plugins/tpm
+  path = plugins/tpm
+  url = https://github.com/tmux-plugins/tpm
+  ignore = dirty
 
 [submodule "nord-tmux"]
 	path = plugins/nord-tmux
-	url = https://github.com/arcticicestudio/ 
+	url = https://github.com/arcticicestudio/nord-tmux 
 
 ; Continuous saving of tmux environment. Automatic restore when tmux is started. Automatic tmux start when computer is turned on.
 [submodule "tmux-continuum"]
@@ -48,6 +49,3 @@
 	path = plugins/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank
 
-; [submodule ""]
-; 	path = plugins/
-; 	url = 
